@@ -1,0 +1,35 @@
+$primary: hsl(213, 96%, 18%);
+$secondary: hsl(243, 100%, 62%);
+$tertiary: hsl(228, 100%, 84%);
+$accent: hsl(206, 94%, 87%);
+$error: hsl(354, 84%, 57%);
+$neutral-400: hsl(231, 11%, 63%);
+$neutral-300: hsl(229, 24%, 87%);
+$neutral-200: hsl(217, 100%, 97%);
+$neutral-100: hsl(231, 100%, 99%);
+
+$colors: (
+	'primary': $primary,
+	'secondary': $secondary,
+	'tertiary': $tertiary,
+	'accent': $accent,
+	'error': $error,
+	'neutral-400': $neutral-400,
+	'neutral-300': $neutral-300,
+	'neutral-200': $neutral-200,
+	'neutral-100': $neutral-100
+);
+
+$base-font-size: 16px;
+$base-border-width: 1px;
+$base-border-radius: 8px;
+
+@each $key, $value in $colors {
+	.text-#{$key} {
+		color: $value;
+	}
+
+	.bg-#{$key} {
+		background-color: $value;
+	}
+}

@@ -1,0 +1,33 @@
+.btn {
+	display: inline-flex;
+	padding: 1rem;
+	font-size: $base-font-size;
+	color: $neutral-100;
+	background-color: $primary;
+	border: none;
+	border-radius: $base-border-radius;
+	cursor: pointer;
+	user-select: none;
+
+	&:hover {
+		background-color: lighten($primary, 5%);
+	}
+
+	&:focus-visible {
+		outline-offset: 2px;
+	}
+
+	&:active {
+		transform: scale(0.97);
+	}
+
+	&.btn-ghost {
+		color: $neutral-400;
+		background: none;
+		font-weight: bold;
+
+		&:hover {
+			color: $primary;
+		}
+	}
+}
