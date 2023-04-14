@@ -19,6 +19,10 @@
 	outline: unset;
 	width: 100%;
 
+	&::placeholder {
+		color: $neutral-400;
+	}
+
 	&.input-error {
 		border-color: $error;
 	}
@@ -31,7 +35,7 @@
 .form-control {
 	display: flex;
 	flex-direction: column;
-	margin-bottom: 1rem;
+	margin-bottom: 2rem;
 }
 
 .label {
@@ -74,8 +78,14 @@
 		font-weight: bold;
 		content: '\2713';
 		visibility: hidden;
-		color: $neutral-100;
+		color: white;
 		font-size: $base-font-size * 1.2;
+	}
+
+	transition: background-color 100ms ease-in, transform 80ms ease-in;
+
+	&:active {
+		transform: scale(0.9);
 	}
 
 	&:checked {
@@ -122,7 +132,7 @@
 		transform: translateY(-50%);
 		width: 18px;
 		height: 18px;
-		background-color: $neutral-100;
+		background-color: white;
 		transition: transform 500ms, background-color 100ms 200ms;
 	}
 
@@ -130,7 +140,6 @@
 		// background-color: $primary;
 		&::before {
 			transform: translateX(150%) translateY(-50%);
-			// background-color: $neutral-100;
 		}
 	}
 }

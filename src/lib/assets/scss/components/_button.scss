@@ -2,12 +2,13 @@
 	display: inline-flex;
 	padding: 1rem;
 	font-size: $base-font-size;
-	color: $neutral-100;
+	color: white;
 	background-color: $primary;
 	border: none;
 	border-radius: $base-border-radius;
 	cursor: pointer;
 	user-select: none;
+	transition: transform 80ms ease-in;
 
 	&:hover {
 		background-color: lighten($primary, 5%);
